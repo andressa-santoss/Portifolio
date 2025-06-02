@@ -5,13 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andressa | Dev</title>
-    <meta name="robots" content="index, follow" />
-    <meta name="description"
-        content="A Techlynx, criada por Andressa Santos (@andressa-santoss no GitHub), oferece soluções tecnológicas rápidas, eficientes e personalizadas." />
-    <meta name="keywords" content="desenvolvimento, front-end, app, soluções tecnologicas" />
-    <meta name="author" content="Andressa Santos" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Bootstrap Icons -->
@@ -22,57 +18,37 @@
     <link href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" rel="stylesheet" />
     <!-- Swiper (Carrossel) -->
     <link href="https://cdn.jsdelivr.net/npm/swiper@9.4.0/swiper-bundle.min.css" rel="stylesheet" />
-    <!-- CSS Principal -->
-    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-    <!-- Cabeçalho -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+    <header class="header">
+        <div class="container">
             <!-- Logo -->
-            <a href="#hero" class="logo d-flex align-items-center">
-                <h1 class="sitename">Andressa S</h1>
+            <a href="#hero" class="logo">
+                <img src="img/icon.png" alt="icon-img">
+                <h1>Andressa S</h1>
             </a>
 
-            <!-- Menu de navegação -->
-            <nav id="navmenu" class="navmenu">
+
+            <!-- Menu -->
+            <nav class="navmenu">
                 <ul>
                     <li><a href="#hero" class="active">Home</a></li>
                     <li><a href="#about">Sobre Mim</a></li>
-                    <li><a href="#services">Estudos</a></li>
-                    <li><a href="#portfolio">Experiência Profissional</a></li>
+                    <li><a href="#studies">Estudos</a></li>
+                    <li><a href="#experience">Experiência Profissional</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                <i class="mobile-nav-toggle bi bi-list"></i>
             </nav>
         </div>
     </header>
 
 
-    <!-- Sobre mim -->
+    <!-- Sobre Mim  -->
+
     <section id="about" class="about">
-        <div class="about-content">
-
-            <div class="about-image">
-                <img src="img/perfil.jpg" alt="perfil" class="about-perfil">
-            </div>
-
-            <div class="about-description">
-                <h2 class="section-title">Sobre Mim</h2>
-
-                <p>
-                    Desenvolvedora em treinamento pessoal que saiu da área de teste e está em busca de uma oportunidade
-                    no mercado de trabalho e está constantemente em busca de novos desafios, voltando para faculdade e
-                    realizando cursos voltados à programação front-end Web e Mobile.
-                </p>
-
-            </div>
-        </div>
-    </section>
-
-             <section id="about" class="about">
         <div class="about-content">
 
             <div class="about-image">
@@ -109,33 +85,94 @@
                         </button>
                     </a>
                 </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Estudos -->
+    <section id="studies" class="studies">
+        <div class="container section-container">
+            <div class="section-title">
+                <h2>Estudos</h2>
+                <div class="section-subtitle">
+                    <span>Conheça meus</span>
+                    <span class="description-title">Estudos</span>
+                </div>
+ <div class="studies-language">
+            <img src="img/studies/html.PNG" alt="">
+            <img src="img/studies/CSS.png" alt="">
+            <img src="img/studies/javascript.PNG" alt="">
+
+
+
+        </div>
+
+            </div>
+        </div>
+
+       
+
+        
+    </section>
+
+    <!-- Experiência -->
+    <section id="experience" class="experience section">
+        <div class="container section-container">
+            <div class="section-title">
+                <h2>Experiência</h2>
+                <div class="section-subtitle">
+                    <span>Experiência</span>
+                    <span class="description-title">Profissional</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="contact section">
+        <div class="container section-container">
+            <div class="section-title">
+                <h2>Contato</h2>
+                <div class="section-subtitle">
+                    <span>Entre em </span>
+                    <span class="description-title">Contato</span>
+                </div>
             </div>
         </div>
     </section>
 
 
+    <footer id="footer" class="footer">
+        <div class="footer-links">
+            <p> &COPY;
+                <span>
+                    Todos dos Direitos Reservados.
+                </span>
+                <strong>Andressa S</strong>
+            </p>
+            <div class="footer-media">
+                <a href="" target="_blank">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Scroll to Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-arrow-up-short"></i>
-    </a>
 
 
     <!-- Bootstrap JS Bundle -->
@@ -158,9 +195,7 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9.4.0/swiper-bundle.min.js"></script>
-
-    <!-- JS Personalizado -->
-    <script src="js/main.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
