@@ -226,7 +226,6 @@ a {
   color: #222;
   margin-bottom: 20px;
   flex-wrap: wrap;
-  /* Se quiser que quebre em telas pequenas */
 }
 
 .skills {
@@ -292,88 +291,99 @@ a {
   font-size: 18px;
   color: var(--contrast-color);
   padding: 20px 0;
- 
+
 }
+
 .section-subtitle .description-title {
   font-weight: 800;
   color: red;
   display: block;
   text-align: center;
-} 
+}
 
 /* Estudos */
 .studies {
-    background-color: #dbdbdb;
+    background-color: #e3e0e0;
+    text-align: center;
+}
+
+.studies .studies-item {
+    padding: 30px;
+    width: 100%;
+    max-width: 300px; 
+    margin: 0 auto; 
+}
+
+
+
+.studies .studies-item i {
+    color: var(--accent-color);
+    display: block;
+    font-size: 44px;
+    float: left;
+    line-height: 0;
+
+}
+
+.studies .studies-item .purecounter {
+    color: var(--contrast-color);
+    font-size: 48px;
+    line-height: 40px;
+    display: block;
     font-weight: 700;
+    margin-left: 60px;
+    font-family: 'Poppins';
 }
 
-.studies .studies-language {
+.studies .studies-item p {
+    color: var(--contrast-color);
+    padding: 15px 0 0 0;
+    padding-top: 15px 0 0 0;
+    font-family: var(--font-padrao);
+    font-size: 14px;
+    margin: 0 0 0 60px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 5px 0; 
-    flex-direction: row;
 }
 
-.studies .studies-language img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; 
-    border: 2px solid #007bff;
-    margin: 5px 40px; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    opacity: 0.8;
-    transition: all 0.3s ease-in-out;
-}
-
-.studies .studies-language img:hover {
-    opacity: 1;
-    transform: scale(1.05);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    border-color: #8328a7;
-}
 
 
 /* Experiencia */
-.experience{
+.experience {
   background-color: #b3d9fd;
 }
+
 /* Contatos */
-.contact{
+.contact {
   background: #b6ffe8;
 }
 
 /* Footer */
 
 .footer {
-    background-color: #fff;
-    margin: 10px;
-    color: black;
-    display: flex;
-    padding: 1px 2px; 
-    align-items: center;
+  background-color: #fff;
+  margin: 10px;
+  color: black;
+  display: flex;
+  padding: 1px 2px;
+  align-items: center;
 
 }
 
 .footer-links {
-    font-family: var(--font-padrao);
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%; 
+  font-family: var(--font-padrao);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .footer-media {
-    display: inline-flex; 
-    gap: 10px; 
-    text-align: center;
+  display: inline-flex;
+  gap: 10px;
+  text-align: center;
 }
 
 .footer-media i {
-    color: #1f1f1f;
+  color: #1f1f1f;
 }
-
-
-
-
