@@ -1,31 +1,41 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Raleway:wght@100..900&family=Roboto:wght@100..900&display=swap');
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Fontes e Cores Globais */
+
+/* Fontes para todo o projeto */
 :root {
-  /* Fontes */
-  --font-padrao: "Roboto";
+  --font-padrao: "Roboto", sans-serif;
   --font-titulo: "Raleway";
-  --font-nav: "Poppins";
+  --font-nav: "Poppins", sans-serif;
 
-  /* Cores principais */
-  --default-color: #222;
-  /* Cor do texto geral */
-  --background-color: #fff;
-  /* Fundo do site */
-  --accent-color: #0e7adf;
-  /* Cor de destaque (links, ícones) */
-  --contrast-color: #444;
-  /* Contraste para textos */
+}
 
-  /* Navegação */
-  --nav-color: #fff;
+/* Cores para todo o site - Global Color */
+:root {
+  --background-color: #FBFAF8;
+  /* Cor Fundo*/
+  --default-color: #1F1E1E;
+  /* Cor Texto*/
+  --heading-color: #fafaff;
+  /* Cor título*/
+  --accent-color: #4985bd;
+  /* Destaque e icones */
+  --surface-color: #ffffff;
+  /* Fundo destaque */
+  --contrast-color: #050505;
+  /* Contraste texto*/
+
+}
+
+/* Nav Menu Color */
+:root {
+  --nav-color: #f5f5f5;
   /* Cor dos textos no menu */
-  --nav-hover-color: #3F5EFB;
+  --nav-hover-color: #246eb9;
   /* Hover dos textos no menu */
   --nav-dropdown-bg-color: #fff;
-  /* Fundo do dropdown (não usado por enquanto) */
 }
+
 
 * {
   margin: 0;
@@ -37,6 +47,12 @@ body {
   padding-top: 70px;
 }
 
+a {
+  color: var(--nav-dropdown-bg-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
 h1,
 h2,
 h3,
@@ -46,12 +62,9 @@ h6 {
   font-family: var(--font-titulo);
 }
 
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: 0.3s;
-}
 
+
+/* Header */
 .header {
   background-color: var(--default-color);
   color: var(--nav-color);
@@ -94,8 +107,6 @@ a {
   align-items: center;
 }
 
-
-
 .navmenu ul {
   list-style: none;
   display: flex;
@@ -128,57 +139,48 @@ a {
   display: none;
 }
 
-@media (max-width: 991px) {
-  .navmenu ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 20px;
-    background-color: var(--default-color);
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    padding: 10px 0;
-  }
-
-  .navmenu ul.active {
-    display: flex;
-  }
-
-  .navmenu li {
-    width: 100%;
-  }
-
-  .navmenu a {
-    padding: 12px 20px;
-    width: 100%;
-    display: block;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
-  }
-}
-
-/* Section */
+/* Global Sections  */
 .section-title {
-  text-align: center;
-  padding-bottom: 50px;
-  position: relative;
-  font-weight: 600;
-  font-family: var(--font-titulo);
-  font-weight: 800;
-  font-size: 40px;
-
-
+    text-align: center;
+    padding-bottom: 20px; 
+    padding: 60px;
+    position: relative;
+    font-weight: 700;
+    flex-direction: column;
 }
 
+.section-title h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 0 auto 10px auto; 
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    color: var(--accent-color);
+    display: block; /* Mantenha 'block' */
+    width: fit-content;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-family: var(--font-nav);
+}
 
-/* Sobre Mim */
+.section-title div {
+    color: #252525;
+    margin: 10px 0 20px 0;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--font-titulo);
+    display: block;
+    
+}
 
+.section-title div .description-title {
+    color: #438bca;
+}
+
+/* Sobre mim */
 .about {
-  padding: 80px;
+  padding: 15px 10px 50px 1px;
 
 }
 
@@ -187,9 +189,11 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 100px;
+
 }
 
 .about-image {
@@ -212,10 +216,11 @@ a {
 }
 
 .about-description p {
-  font-size: 16px;
+  font-size: 18px;
   color: #222;
   line-height: 1.8;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .about-skills {
@@ -264,126 +269,91 @@ a {
   font-size: 18px;
 }
 
-/* Section */
-.section-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 0 10px;
-}
 
-.section-title h2 {
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: 700;
-  padding: 8px 20px;
-  margin: 0 auto;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
-  display: inline-block;
-  text-transform: uppercase;
-  border-radius: 50px;
-  font-family: var(--font-titulo);
 
-}
-
-.section-subtitle {
-  font-size: 18px;
-  color: var(--contrast-color);
-  padding: 20px 0;
-
-}
-
-.section-subtitle .description-title {
-  font-weight: 800;
-  color: red;
-  display: block;
-  text-align: center;
-}
-
-/* Estudos */
-.studies {
-    background-color: #e3e0e0;
-    text-align: center;
-}
+/* Estudos  */
 
 .studies .studies-item {
-    padding: 30px;
-    width: 100%;
-    max-width: 300px; 
-    margin: 0 auto; 
+  padding: 70px;
+  width: 100%;
 }
 
-
+.studies {
+  background-color: #b8c4cc;
+}
 
 .studies .studies-item i {
-    color: var(--accent-color);
-    display: block;
-    font-size: 44px;
-    float: left;
-    line-height: 0;
-
+  color: var(--accent-color);
+  display: block;
+  font-size: 50px;
+  float: left;
 }
 
 .studies .studies-item .purecounter {
-    color: var(--contrast-color);
-    font-size: 48px;
-    line-height: 40px;
-    display: block;
-    font-weight: 700;
-    margin-left: 60px;
-    font-family: 'Poppins';
+  color: var(--contrast-color);
+  font-size: 48px;
+  line-height: 40px;
+  display: block;
+  font-weight: 700;
+  margin-left: 60px;
+  font-family: 'Poppins';
 }
 
 .studies .studies-item p {
-    color: var(--contrast-color);
-    padding: 15px 0 0 0;
-    padding-top: 15px 0 0 0;
-    font-family: var(--font-padrao);
-    font-size: 14px;
-    margin: 0 0 0 60px;
-    display: flex;
-    align-items: center;
+  color: var(--contrast-color);
+  padding: 15px 0 0 0;
+  padding-top: 15px 0 0 0;
+  font-family: var(--font-padrao);
+  font-size: 15px;
+  margin: 0 0 0 70px;
 }
 
 
 
-/* Experiencia */
+
+
+
 .experience {
-  background-color: #b3d9fd;
+  background-color: #fff;
 }
 
 /* Contatos */
 .contact {
-  background: #b6ffe8;
+  background: #fff;
 }
 
-/* Footer */
 
-.footer {
-  background-color: #fff;
-  margin: 10px;
-  color: black;
-  display: flex;
-  padding: 1px 2px;
-  align-items: center;
 
-}
 
-.footer-links {
-  font-family: var(--font-padrao);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
+@media (max-width: 991px) {
+  .navmenu ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: var(--default-color);
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+  }
 
-.footer-media {
-  display: inline-flex;
-  gap: 10px;
-  text-align: center;
-}
+  .navmenu ul.active {
+    display: flex;
+  }
 
-.footer-media i {
-  color: #1f1f1f;
+  .navmenu li {
+    width: 100%;
+  }
+
+  .navmenu a {
+    padding: 12px 20px;
+    width: 100%;
+    display: block;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
 }
